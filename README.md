@@ -12,5 +12,5 @@ Install this plugin using `pip`:
 #### create Procfile `echo`:
     echo worker: python bot.py > Procfile
 
-#### create requirements.txt `pip freeze`:
+#### create or update requirements.txt `pip freeze`:
     pip freeze > requirements.txt

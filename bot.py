@@ -2,6 +2,8 @@ import logging
 from uzwords import words
 from aiogram import Bot, Dispatcher, executor, types
 from cheack import cheack
+
+from tranlater import to_cyrillic, to_latin
 API_TOKEN = '5727920030:AAHg43bDLm19BA_BZagmwdAWaY0TfMJ4pxk'
 
 # Configure logging
@@ -19,11 +21,12 @@ async def send_welcome(message: types.Message):
 @dp.message_handler(commands=['help'])
 async def send_welcome(message: types.Message):
 
-    await message.reply(f"Menda {len(words)}ta krillcha so`z bor")
+    await message.reply(f"Menda {len(words)}ta krillcha so`zlar bor")
 
 @dp.message_handler()
 async def result(message: types.Message):
     word = message.text
+    trans = to_cyrillic(word) if words.isascii() else to_latin(words)
     checker = cheack(word)
     if checker['available']:
         javob = f"👍 {word.capitalize()}"
