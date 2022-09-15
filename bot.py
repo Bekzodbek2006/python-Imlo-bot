@@ -3,8 +3,7 @@ from uzwords import words
 from aiogram import Bot, Dispatcher, executor, types
 from cheack import cheack
 
-from tranlater import to_cyrillic, to_latin
-API_TOKEN = '5727920030:AAHg43bDLm19BA_BZagmwdAWaY0TfMJ4pxk'
+API_TOKEN = 'Bot token here'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -26,7 +25,7 @@ async def send_welcome(message: types.Message):
 @dp.message_handler()
 async def result(message: types.Message):
     word = message.text
-    trans = to_cyrillic(word) if words.isascii() else to_latin(words)
+    
     checker = cheack(word)
     if checker['available']:
         javob = f"👍 {word.capitalize()}"

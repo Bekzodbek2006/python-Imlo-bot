@@ -1,9 +1,11 @@
 from uzwords import words
 from difflib import get_close_matches
 
+from tranlater import to_latin
 
 def cheack(word, words=words):
     word = word.lower()
+    words = to_latin(words)
     matches = set(get_close_matches(word, words))
     available = False
 
