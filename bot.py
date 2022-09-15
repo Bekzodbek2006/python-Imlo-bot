@@ -1,7 +1,8 @@
 import logging
+from uzwords import words
 from aiogram import Bot, Dispatcher, executor, types
 from cheack import cheack
-API_TOKEN = 'Bot token here'
+API_TOKEN = '5727920030:AAHg43bDLm19BA_BZagmwdAWaY0TfMJ4pxk'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -10,11 +11,15 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-@dp.message_handler(commands=['start', 'help'])
+@dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
 
-    await message.reply("Salom men orqali faqat krilcha so`zlarni tekshirishingiz mumkin.")
+    await message.reply("Salom men orqali hozircha krilcha so`zlarni tekshirishingiz mumkin. ")
 
+@dp.message_handler(commands=['help'])
+async def send_welcome(message: types.Message):
+
+    await message.reply(f"Menda {len(words)}ta krillcha so`z bor")
 
 @dp.message_handler()
 async def result(message: types.Message):
