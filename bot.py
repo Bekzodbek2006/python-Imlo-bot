@@ -24,9 +24,9 @@ async def result(message: types.Message):
     if checker['available']:
         javob = f"👍 {word.capitalize()}"
     else:
-        javob = f"📝 {word.capitalize()} \n📝"
+        javob = f"🙄{word.capitalize()}\n"
         for msg in checker["matches"]:
-            javob += f"{msg.capitalize()}\n"
+            javob += f" 📝{msg.capitalize()}\n"
     await message.answer(javob)
 
 
