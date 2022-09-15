@@ -2,7 +2,6 @@ import logging
 from uzwords import words
 from aiogram import Bot, Dispatcher, executor, types
 from cheack import cheack
-
 API_TOKEN = '5727920030:AAHg43bDLm19BA_BZagmwdAWaY0TfMJ4pxk'
 
 # Configure logging
@@ -25,7 +24,6 @@ async def send_welcome(message: types.Message):
 @dp.message_handler()
 async def result(message: types.Message):
     word = message.text
-    
     checker = cheack(word)
     if checker['available']:
         javob = f"👍 {word.capitalize()}"
