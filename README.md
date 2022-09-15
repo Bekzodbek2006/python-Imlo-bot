@@ -7,10 +7,13 @@ Install this plugin using `pip`:
     pip install aiogram
 
 ## Deploy to Heroku
+### write in the terminal
+
     create Procfile `echo`:
 
         echo worker: python bot.py > Procfile
 
+### write in the terminal
     create requirements.txt `pip freeze`:
-    
+
         pip freeze > requirements.txt
