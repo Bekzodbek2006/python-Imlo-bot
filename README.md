@@ -9,11 +9,8 @@ Install this plugin using `pip`:
 ## Deploy to Heroku
 ### write in the terminal
 
-    create Procfile `echo`:
+#### create Procfile `echo`:
+            echo worker: python bot.py > Procfile
 
-        echo worker: python bot.py > Procfile
-
-### write in the terminal
-    create requirements.txt `pip freeze`:
-
-        pip freeze > requirements.txt
+#### create requirements.txt `pip freeze`:
+            pip freeze > requirements.txt
