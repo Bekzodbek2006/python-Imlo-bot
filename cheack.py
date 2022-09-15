@@ -17,9 +17,3 @@ def cheack(word, words=words):
         word = word.replace('х', 'ҳ')
         matches.update(get_close_matches(word, words))
     return {"available":available, "matches":matches}
-
-
-
-
-if __name__ == '__main__':
-    print(cheack("ху"))
