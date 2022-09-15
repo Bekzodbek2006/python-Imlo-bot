@@ -10,7 +10,7 @@ Install this plugin using `pip`:
 ### write in the terminal
 
 #### create Procfile `echo`:
-            echo worker: python bot.py > Procfile
+echo worker: python bot.py > Procfile
 
 #### create requirements.txt `pip freeze`:
-            pip freeze > requirements.txt
+pip freeze > requirements.txt
