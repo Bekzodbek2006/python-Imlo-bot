@@ -22,9 +22,9 @@ async def result(message: types.Message):
     word = message.text
     checker = cheack(word)
     if checker['available']:
-        javob = f"To`g`ri: {word.capitalize()}"
+        javob = f"👍 {word.capitalize()}"
     else:
-        javob = f"Xato: {word.capitalize()} \n"
+        javob = f"📝 {word.capitalize()} \n"
         for msg in checker["matches"]:
             javob += f"{msg.capitalize()}\n"
     await message.answer(javob)
