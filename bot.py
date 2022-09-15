@@ -3,7 +3,7 @@ from uzwords import words
 from aiogram import Bot, Dispatcher, executor, types
 from cheack import cheack
 
-API_TOKEN = 'Bot token here'
+API_TOKEN = '5727920030:AAHg43bDLm19BA_BZagmwdAWaY0TfMJ4pxk'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
